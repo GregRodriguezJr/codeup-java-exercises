@@ -10,9 +10,20 @@ public class ConsoleExercises {
         // Exercise 1
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
-        int userNum = scanner.nextInt();
-        System.out.println("The number you entered is: " + userNum);
-        scanner.close();
+        // System.out.print("Enter an integer: ");
+        // int userNum = scanner.nextInt();
+        // System.out.println("The number you entered is: " + userNum);
+
+        // Exercise 2
+        System.out.print("Enter first word: ");
+        String firstWord = scanner.next();
+        System.out.print("Enter second word: ");
+        String secondWord = scanner.next();
+        System.out.print("Enter third word: ");
+        String thirdWord = scanner.next();
+        System.out.println(
+            " 1st word: " + firstWord + "\n"
+            + " 2nd word: " + secondWord + "\n" 
+            + " 3rd word: " + thirdWord);
     }
 }
