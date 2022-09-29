@@ -27,8 +27,23 @@ public class ConsoleExercises {
         //     + " 3rd word: " + thirdWord);
 
         // Exercise 3
-        System.out.print("Enter a sentence: ");
-        String userSentence = scanner.nextLine();
-        System.out.println("You entered: " + userSentence);
+        // System.out.print("Enter a sentence: ");
+        // String userSentence = scanner.nextLine();
+        // System.out.println("You entered: " + userSentence);
+
+        // Perimeter
+        // Exercise 1
+        System.out.print("Enter the length of the classroom in ft: ");
+        String strLength = scanner.nextLine();
+        int length = Integer.parseInt(strLength);
+
+        System.out.print("Enter the width of the classroom in ft: ");
+        String strWidth = scanner.nextLine();
+        int width = Integer.parseInt(strWidth);
+
+        int area = length * width;
+        int perimeter = (length * length) + (width * width);
+        System.out.println("The area of the classroom is " + area + " sqft.");
+        System.out.println("The perimeter of the classroom is " + perimeter + " feet.");
     }
 }
