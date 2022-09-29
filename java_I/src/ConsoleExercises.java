@@ -32,18 +32,26 @@ public class ConsoleExercises {
         // System.out.println("You entered: " + userSentence);
 
         // Perimeter
-        // Exercise 1
+        // Exercise 1 and Bonus
         System.out.print("Enter the length of the classroom in ft: ");
-        String strLength = scanner.nextLine();
-        int length = Integer.parseInt(strLength);
+        // String strLength = scanner.nextLine();
+        // int length = Integer.parseInt(strLength);
+        float length = scanner.nextFloat();
 
         System.out.print("Enter the width of the classroom in ft: ");
-        String strWidth = scanner.nextLine();
-        int width = Integer.parseInt(strWidth);
+        // String strWidth = scanner.nextLine();
+        // int width = Integer.parseInt(strWidth);
+        float width = scanner.nextFloat();
 
-        int area = length * width;
-        int perimeter = (length * length) + (width * width);
+        System.out.print("Enter the height of the classroom in ft: ");
+        float height = scanner.nextFloat();
+
+        float volume = length * width * height;
+        float area = length * width;
+        float perimeter = (length * length) + (width * width);
+
         System.out.println("The area of the classroom is " + area + " sqft.");
         System.out.println("The perimeter of the classroom is " + perimeter + " feet.");
+        System.out.println("The volume of the classroom is " + volume + " cubic feet.");
     }
 }
