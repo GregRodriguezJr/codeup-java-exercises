@@ -15,15 +15,20 @@ public class ConsoleExercises {
         // System.out.println("The number you entered is: " + userNum);
 
         // Exercise 2
-        System.out.print("Enter first word: ");
-        String firstWord = scanner.next();
-        System.out.print("Enter second word: ");
-        String secondWord = scanner.next();
-        System.out.print("Enter third word: ");
-        String thirdWord = scanner.next();
-        System.out.println(
-            " 1st word: " + firstWord + "\n"
-            + " 2nd word: " + secondWord + "\n" 
-            + " 3rd word: " + thirdWord);
+        // System.out.print("Enter first word: ");
+        // String firstWord = scanner.next();
+        // System.out.print("Enter second word: ");
+        // String secondWord = scanner.next();
+        // System.out.print("Enter third word: ");
+        // String thirdWord = scanner.next();
+        // System.out.println(
+        //     " 1st word: " + firstWord + "\n"
+        //     + " 2nd word: " + secondWord + "\n" 
+        //     + " 3rd word: " + thirdWord);
+
+        // Exercise 3
+        System.out.print("Enter a sentence: ");
+        String userSentence = scanner.nextLine();
+        System.out.println("You entered: " + userSentence);
     }
 }
