@@ -9,10 +9,15 @@ public class ControlFlowExercises {
         // }
 
         // Exercise 1b - Do While
-        int i = 0;
+        // int i = 0;
+        // do {
+        //     System.out.println("Count by twos: " + i);
+        //     i += 2;
+        // } while (i <= 100);
+        int i = 100;
         do {
-            System.out.println("Count by twos: " + i);
-            i += 2;
-        } while (i <= 100);
+            System.out.println("Count by fives: " + i);
+            i -= 5;
+        } while (i >= -10);
     }
 }
