@@ -21,10 +21,19 @@ public class ControlFlowExercises {
         //     i -= 5;
         // } while (i >= -10);
 
-        long i = 2;
-        do {
+        // long i = 2;
+        // do {
+        //     System.out.println("Number squared: " + i);
+        //     i *= i;
+        // } while (i <= 1000000);
+
+        // Exercise 1c - For
+        // for(int i = 100; i >= -10; i -= 5) {
+        //     System.out.println("Countdown by fives: " + i);
+        // }
+
+        for(long i = 2; i <= 1000000; i *= i) {
             System.out.println("Number squared: " + i);
-            i *= i;
-        } while (i <= 1000000);
+        }
     }
 }
