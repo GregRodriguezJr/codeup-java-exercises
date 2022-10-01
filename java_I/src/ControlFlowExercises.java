@@ -14,10 +14,17 @@ public class ControlFlowExercises {
         //     System.out.println("Count by twos: " + i);
         //     i += 2;
         // } while (i <= 100);
-        int i = 100;
+
+        // int i = 100;
+        // do {
+        //     System.out.println("Count by fives: " + i);
+        //     i -= 5;
+        // } while (i >= -10);
+
+        long i = 2;
         do {
-            System.out.println("Count by fives: " + i);
-            i -= 5;
-        } while (i >= -10);
+            System.out.println("Number squared: " + i);
+            i *= i;
+        } while (i <= 1000000);
     }
 }
