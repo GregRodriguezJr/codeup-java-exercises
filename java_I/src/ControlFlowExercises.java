@@ -52,26 +52,58 @@ public class ControlFlowExercises {
         // }
 
         // Exercise 3 - Powers
-        boolean keepGoing;
+        // boolean keepGoing;
+        // Scanner scanner = new Scanner(System.in);
+        // do {
+        //     System.out.print("What number would you like to go up to? ");
+        //     int num = scanner.nextInt();
+        //     System.out.println("\nHere is your table!\n");
+        //     System.out.println("number | squared | cubed\n-------------------------");
+        //     for (int i = 1; i <= num; i++) {
+        //         int squared = i * i;
+        //         int cubed = i * i * i;
+        //         System.out.println(i + "      | " + squared + "       |  " + cubed );
+        //     }
+        //     scanner.nextLine();
+        //     System.out.println("Would you like to try another number?");
+        //     String answer = scanner.nextLine();
+        //     if (answer.equalsIgnoreCase("yes")) {
+        //         keepGoing = true;
+        //     } else {
+        //         keepGoing = false;
+        //     }
+        // } while (keepGoing);
+
+        // Exercise 4
         Scanner scanner = new Scanner(System.in);
+        boolean keepGoing;
         do {
-            System.out.print("What number would you like to go up to? ");
+            System.out.print("Enter a grade between 0 - 100: ");
             int num = scanner.nextInt();
-            System.out.println("\nHere is your table!\n");
-            System.out.println("number | squared | cubed\n-------------------------");
-            for (int i = 1; i <= num; i++) {
-                int squared = i * i;
-                int cubed = i * i * i;
-                System.out.println(i + "      | " + squared + "       |  " + cubed );
+            String grade = " ";
+            if (num <= 100 && num >= 88) {
+                grade = " is an A.";
+            } else if (num <= 87 && num >= 80) {
+                grade = " is an B.";
+            } else if (num <= 79 && num >= 67) {
+                grade = " is an C.";
+            } else if (num <= 66 && num >= 60) {
+                grade = " is an D.";
+            } else {
+                grade = " is an F.";
             }
+            System.out.println("The number grade " + num + grade);
+
             scanner.nextLine();
-            System.out.println("Would you like to try another number?");
+            System.out.print("Would you like another grade?");
             String answer = scanner.nextLine();
+
             if (answer.equalsIgnoreCase("yes")) {
                 keepGoing = true;
             } else {
                 keepGoing = false;
             }
         } while (keepGoing);
+        
     }
 }
