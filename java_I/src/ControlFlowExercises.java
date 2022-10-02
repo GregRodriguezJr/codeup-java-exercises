@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
         // Loop Basics 1
@@ -37,16 +39,39 @@ public class ControlFlowExercises {
         // }
 
         // Exercise 2 - Fizzbuzz
-        for(int i = 1; i <= 100; i++) {
-            if (i % 15 == 0) {
-                System.out.println(i + "FizzBuzz:");
-            } else if (i % 5 == 0) {
-                System.out.println(i + " Buzz");
-            } else if (i % 3 == 0) {
-                System.out.println(i + " Fizz");
-            } else {
-                System.out.println(i);
+        // for(int i = 1; i <= 100; i++) {
+        //     if (i % 15 == 0) {
+        //         System.out.println(i + "FizzBuzz:");
+        //     } else if (i % 5 == 0) {
+        //         System.out.println(i + " Buzz");
+        //     } else if (i % 3 == 0) {
+        //         System.out.println(i + " Fizz");
+        //     } else {
+        //         System.out.println(i);
+        //     }
+        // }
+
+        // Exercise 3 - Powers
+        boolean keepGoing;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.print("What number would you like to go up to? ");
+            int num = scanner.nextInt();
+            System.out.println("\nHere is your table!\n");
+            System.out.println("number | squared | cubed\n-------------------------");
+            for (int i = 1; i <= num; i++) {
+                int squared = i * i;
+                int cubed = i * i * i;
+                System.out.println(i + "      | " + squared + "       |  " + cubed );
             }
-        }
+            scanner.nextLine();
+            System.out.println("Would you like to try another number?");
+            String answer = scanner.nextLine();
+            if (answer.equalsIgnoreCase("yes")) {
+                keepGoing = true;
+            } else {
+                keepGoing = false;
+            }
+        } while (keepGoing);
     }
 }
