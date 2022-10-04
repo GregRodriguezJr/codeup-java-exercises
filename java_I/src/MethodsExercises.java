@@ -16,10 +16,37 @@ public class MethodsExercises {
         // System.out.println("\nYour remainder result: " + modulus(userInput1, userInput2));
 
         // Exercise 2
-        System.out.print("Enter a number between 1 - 10 : ");
-        int userInput = scanner.nextInt();
-        getInteger(userInput);
+        // System.out.print("Enter a number between 1 - 10 : ");
+        // int userInput = scanner.nextInt();
+        // getInteger(userInput);
 
+        // Exercise 3
+        boolean keepGoing = false;
+        boolean numValid;
+    
+        do {
+            System.out.print("Enter a number between 1 - 10: ");
+            long userInput = scanner.nextLong();
+
+            if (userInput >= 1 & userInput <= 10) {
+                numValid = true;
+                System.out.println("The factorial for " + userInput + " is " + getFactorial(userInput));
+
+                scanner.nextLine();
+                System.out.print("Would you like to continue? [y/n] ");
+                String answer = scanner.nextLine();
+
+                if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")) {
+                    keepGoing = true;
+                } else {
+                    keepGoing = false;
+                }
+            } else {
+                numValid = false;
+            }
+
+        } while (!numValid || keepGoing);
+ 
         scanner.close();
     }
     // Exercise 1 - Basic Arithmetic
@@ -40,16 +67,19 @@ public class MethodsExercises {
     // }
 
     // Exercise 2
-    public static void getInteger(int num) {
-        Scanner scanner2 = new Scanner(System.in);
+    // public static void getInteger(int num) {
+    //     Scanner scanner2 = new Scanner(System.in);
 
-        if (num >= 1 & num <= 10) {
-            System.out.println("Your number " + num + " is between 1 - 10!");
-        } else {
-            System.out.print("Enter a number between 1 - 10 : ");
-            int userInput = scanner2.nextInt();
-            getInteger(userInput);
-            scanner2.close();
-        }
-    }
+    //     if (num >= 1 & num <= 10) {
+    //         System.out.println("Your number " + num + " is between 1 - 10!");
+    //     } else {
+    //         System.out.print("Enter a number between 1 - 10 : ");
+    //         int userInput = scanner2.nextInt();
+    //         getInteger(userInput);
+    //         scanner2.close();
+    //     }
+    // }
+
+    // Exercise 3
+      
 }
