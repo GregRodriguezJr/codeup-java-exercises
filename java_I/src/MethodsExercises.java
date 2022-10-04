@@ -46,7 +46,7 @@ public class MethodsExercises {
             }
 
         } while (!numValid || keepGoing);
- 
+
         scanner.close();
     }
     // Exercise 1 - Basic Arithmetic
@@ -80,6 +80,12 @@ public class MethodsExercises {
     //     }
     // }
 
-    // Exercise 3
-      
+    // Exercise 3 method
+    public static long getFactorial(long num) {
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i) {
+            factorial *= i;
+        }
+        return factorial;
+    }  
 }
