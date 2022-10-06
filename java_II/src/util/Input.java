@@ -17,15 +17,28 @@ public class Input {
     }
 
     public static int getInt(int min, int max) {
-        System.out.printf("Enter a between %s and %s ", min, max);
+        System.out.print("Enter a number between " + min + " - " + max + " : ");
         int userNum = scanner.nextInt(); 
-        if(userNum > min && userNum < max) {
-            getInt(min, max);
+        if(userNum < min || userNum > max) {
+            userNum = getInt(min, max);
         }
         return userNum;
     }
 
     public static int getInt() {
         return scanner.nextInt();
+    }
+
+    public static double getDouble(double min, double max){
+        System.out.print("Enter a number between " + min + " - " + max + " : ");
+        double userNum = scanner.nextDouble();
+        if(userNum < min || userNum > max) {
+            userNum = getDouble(min, max);
+        }
+        return userNum;
+    }
+
+    public static double getDouble(){
+        return scanner.nextDouble();
     }
 }
