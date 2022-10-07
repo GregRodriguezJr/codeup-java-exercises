@@ -6,7 +6,8 @@ public class CircleApp {
         System.out.print("Enter a radius: ");
         double radiusInput = Input.getDouble();
         Circle circle = new Circle(radiusInput);
-        System.out.println("The area of " + radiusInput + " is " + circle.getArea());
-        System.out.println("The circumference of " + radiusInput + " is " + circle.getCircumference());;
+        double area = circle.getArea();
+        double circumference = circle.getCircumference();
+        System.out.printf("The circle has the area of %s, and circumference of %s", area, circumference);
     }
 }
