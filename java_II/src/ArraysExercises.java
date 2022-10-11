@@ -17,5 +17,23 @@ public class ArraysExercises {
         for(int i = 0; i < personArr.length; i++) {
             System.out.println("The index " + i + " value is " + personArr[i].getName());
         }
+
+        Person bob = new Person("Bob");
+        System.out.println("New array with added person " + Arrays.toString(addPerson(personArr, bob)));
+    }
+
+    public static String[] addPerson(Person [] people, Person person) {
+        int i;
+
+        // create a new array of a bigger size (+ one element)
+        String newArray[] = new String[people.length + 1];
+
+        // insert the elements from the old array into the new one
+        for (i = 0; i < people.length; i++)
+            newArray[i] = people[i].getName();
+
+        // assign last element to new person added
+        newArray[people.length] = person.getName();
+        return newArray;
     }
 }
