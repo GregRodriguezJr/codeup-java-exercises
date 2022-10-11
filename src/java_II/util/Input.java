@@ -1,4 +1,4 @@
-package util;
+package java_II.util;
 import java.util.Scanner;
 
 // Exercise 1 - Create an input validation class

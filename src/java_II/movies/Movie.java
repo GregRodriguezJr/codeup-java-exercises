@@ -1,4 +1,4 @@
-package movies;
+package java_II.movies;
 
 public class Movie {
     private String name;

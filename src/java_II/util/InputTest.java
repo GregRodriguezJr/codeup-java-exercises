@@ -1,4 +1,4 @@
-package util;
+package java_II.util;
 
 public class InputTest {
     public static void main(String[] args) {

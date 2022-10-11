@@ -1,4 +1,4 @@
-package Shapes;
+package java_II.Shapes;
 
 public class Square extends Quadrilateral {
      // public Square(long side) {

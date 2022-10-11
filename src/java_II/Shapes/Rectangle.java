@@ -1,4 +1,4 @@
-package Shapes;
+package java_II.Shapes;
 
 public class Rectangle extends Quadrilateral {
     // protected long length;

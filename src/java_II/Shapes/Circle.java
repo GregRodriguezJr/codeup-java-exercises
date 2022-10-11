@@ -1,4 +1,4 @@
-package Shapes;
+package java_II.Shapes;
 
 // Exercise 2 - Circle class
 public class Circle {
