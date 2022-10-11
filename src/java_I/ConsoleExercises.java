@@ -1,3 +1,4 @@
+package java_I;
 import java.util.Scanner;
 
 public class ConsoleExercises {
