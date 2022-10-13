@@ -1,6 +1,7 @@
 package java_II.grades;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Student {
     private String name;
@@ -13,8 +14,8 @@ public class Student {
     }
 
     // Getter to return grades array
-    public ArrayList<Integer> getGrades() {
-        return this.grades;
+    public String getGrades() {
+        return this.grades.stream().map(Object::toString).collect(Collectors.joining(", "));
     }
 
     // Getter to return the student's name
