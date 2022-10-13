@@ -2,9 +2,12 @@ package java_II.movies;
 import java_II.util.*;
 
 public class MoviesApplication {
+    private static Movie [] movies;
     public static void main(String[] args) {
         MoviesApplication.displayOptions();
         Input.getInt(0,5);
+        movies = MoviesArray.findAll();
+        System.out.println(movies);
     }
 
     public static void displayOptions() {
