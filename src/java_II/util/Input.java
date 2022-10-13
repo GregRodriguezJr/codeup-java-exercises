@@ -6,7 +6,6 @@ public class Input {
     private static Scanner scanner = new Scanner(System.in);
 
     public static String getString() {
-        System.out.print("Enter a string: ");
         return scanner.nextLine();
     }
 
@@ -36,6 +35,34 @@ public class Input {
             userNum = getDouble(min, max);
         }
         return userNum;
+    }
+
+    public static int getIntErr(int min, int max) {
+        try {
+            System.out.print("Enter a number between " + min + " - " + max + " : ");
+            int userNum = Integer.parseInt(getString());
+            if(userNum < min || userNum > max) {
+                userNum = getIntErr(min, max);
+            }
+            return userNum;
+        } catch (NumberFormatException e) {
+            System.out.println("Try again");
+            return getIntErr(min,max);
+        }
+    }
+
+    public static double getDoubleErr(double min, double max){
+        try {
+            System.out.print("Enter a number between " + min + " - " + max + " : ");
+            double userNum = Double.parseDouble(getString());
+            if(userNum < min || userNum > max) {
+                userNum = getDoubleErr(min, max);
+            }
+            return userNum;
+        } catch (NumberFormatException e) {
+            System.out.println("Try again");
+            return getDoubleErr(min,max);
+        }
     }
 
     public static double getDouble(){
