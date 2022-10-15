@@ -27,6 +27,7 @@ public class Student {
     public void addGrade(int grade) {
         this.grades.add(grade);
     }
+
     // returns the average of the students grades
     public double getGradeAverage() {
         int i;
@@ -35,5 +36,14 @@ public class Student {
             total += this.grades.get(i);
         }
         return total / this.grades.size();
+    }
+
+    // Method to print out students information
+    public static void printStudent(Student student) {
+        System.out.format(
+                "Student %s's" +
+                        " grades are %s" +
+                        " and the average is %.1f",
+                student.getName(),student.getGrades() ,student.getGradeAverage());
     }
 }
