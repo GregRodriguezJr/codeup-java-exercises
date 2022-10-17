@@ -30,18 +30,18 @@ public class GroceryListApp {
     }
     public static void promptSelection() {
         System.out.println("Select a category by entering a number: \n" +
-                "1. Dairy \n" + "2. Fruits \n" + "3. Meat \n" + "4. Veggies ");
+                "1. Dairy \n" + "2. Fruits \n" + "3. Meat \n" + "4. Other ");
         int choice = scanner.nextInt();
         scanner.nextLine();
 
         if (choice == 1) {
             addItem("Dairy");
         } else if (choice == 2) {
-            System.out.println("you chose 2");
+            addItem("Fruits");
         } else if (choice == 3) {
-            System.out.println("you chose 3");
+            addItem("Meat");
         } else if (choice == 4) {
-            System.out.println("you chose 4");
+            addItem("Other");
         } else {
             System.out.println("Invalid entry...try again");
             promptSelection();
