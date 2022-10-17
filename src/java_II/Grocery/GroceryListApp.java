@@ -1,7 +1,5 @@
 package java_II.Grocery;
 
-import java_II.util.Input;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +9,7 @@ public class GroceryListApp {
 
     public static void main(String[] args) {
         promptUser();
-        System.out.print("This is the Current list: " + list);
+        printList();
     }
 
     // Prompt user to create grocery list
@@ -35,6 +33,7 @@ public class GroceryListApp {
                 "1. Dairy \n" + "2. Fruits \n" + "3. Meat \n" + "4. Veggies ");
         int choice = scanner.nextInt();
         scanner.nextLine();
+
         if (choice == 1) {
             addItem("Dairy");
         } else if (choice == 2) {
@@ -62,5 +61,26 @@ public class GroceryListApp {
 
         GroceryItem newItem = new GroceryItem(category, item, count);
         list.add(newItem);
+        keepGoing();
+    }
+
+    public static void printList() {
+        System.out.println("\nCurrent List: \n" +
+                "Category | Item | Quantity");
+        list.forEach(System.out::println);
+    }
+
+    public static void keepGoing() {
+        System.out.print("Would you like add another item? [y/n] ");
+        String answer = scanner.nextLine();
+
+        if (answer.equalsIgnoreCase("y")) {
+            promptSelection();
+        } else if (answer.equalsIgnoreCase("n")) {
+            System.out.println("List complete, \nThank you for using Grocery App");
+        } else {
+            System.out.println("Invalid input...enter [y/n]");
+            keepGoing();
+        }
     }
 }
